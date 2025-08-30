@@ -1,0 +1,23 @@
+lzc-sdk-version: "0.1"
+name: 生财有迹
+package: cloud.lazycat.app.wealth-tracker
+version: 0.0.1
+description: 💰生财有迹（Wealth
+  Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI
+  能力，结合每种资产的特性和当前环境，提供适宜的财务建议。
+homepage: ""
+author: nicejade
+application:
+  subdomain: wealth-tracker
+  background_task: false
+  multi_instance: true
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://wealth-tracker.cloud.lazycat.app.wealth-tracker.lzcapp:8888/
+services:
+  wealth-tracker:
+    image: registry.lazycat.cloud/mxuexxmy/nicejade/wealth-tracker:6edc04afa847f30b
+    binds:
+      - /lzcapp/var/data:/app/data

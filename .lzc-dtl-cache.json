@@ -1,0 +1,32 @@
+{
+  "name": "生财有迹",
+  "package": "cloud.lazycat.app.wealth-tracker",
+  "description": "💰生财有迹（Wealth Tracker）是一款专注于个人资产分析的应用程序。其核心功能是：全面记录并展示用户的资产状况，帮助用户轻松了解财务现状；运用 AI 能力，结合每种资产的特性和当前环境，提供适宜的财务建议。",
+  "homepage": "",
+  "author": "nicejade",
+  "app_features": [
+    "multi_instance"
+  ],
+  "subdomain": "wealth-tracker",
+  "version": "0.0.1",
+  "iconPath": "lzc-icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "wealth-tracker_8888_8888": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_nicejade_wealth-tracker": {
+    "originalImage": "nicejade/wealth-tracker",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/mxuexxmy/nicejade/wealth-tracker:6edc04afa847f30b",
+    "timestamp": "2025-02-07T13:54:27.726Z"
+  },
+  "wealth-tracker_volume_/app/data_action": "emptyDir",
+  "wealth-tracker_volume_/app/data_location": "app_data"
+}
